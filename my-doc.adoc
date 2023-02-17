@@ -1,0 +1,218 @@
+### 1.What is .NET Core Bundle?
+
+DotNET Core Bundle is used to distribute a set of .NET Core runtime and libraries as a single package to simplify deployment and make it easier to distribute applications.
+
+
+### 2.Why .NET Core Bundle is required?
+
+Bundling .NET Core runtime and libraries in a single package has several benefits, including:
+
+*2.1* Smaller download size: With a bundled package, users don't need to download the .NET Core runtime and libraries separately, reducing the overall download size.
+
+*2.2* Consistent runtime environment: A bundled package ensures that the runtime and libraries are all the same version, reducing the risk of version compatibility issues.
+
+*2.3* Easy deployment: With a single package to distribute, deployment of applications becomes much simpler.
+
+*2.4* Offline installation: A bundled package can be used to install .NET Core on a machine without an internet connection, making it easier to deploy in offline or low-bandwidth environments.
+
+*2.5*
+.NET Core Bundle helps to make it easier to distribute .NET Core applications, making deployment and installation simpler and more consistent for end-users.
+
+### 3.When .Net Core Bundle is required?
+DotNET Core Bundle can be used in the following scenarios:
+
+*3.1* Web Applications: .NET Core Bundle can be used to develop modern, cross-platform we applications using ASP.NET Core.
+
+*3.2* Cloud Computing: .NET Core Bundle supports cloud-based deployments and provides built-in support for various cloud-based services.
+
+*3.3* Microservices: .NET Core Bundle is ideal for building microservices, which are small, autonomous services that work together to form a larger system.
+
+*3.4* Containerization: .NET Core Bundle is built to work with containers and can be deployed in a
+container environment, making it an ideal solution for microservices and cloud deployments.
+
+*3.5* Cross-platform Development: .NET Core Bundle can run on Windows, Mac, and Linux operating systems, making it an ideal choice for cross-platform development.
+
+*3.6* .NET Core Bundle is an excellent choice for modern web development and cloud computing, as it
+provides a powerful set of tools and services for building scalable, secure, and high-performance
+applications.
+
+### 4.How To install .NET Core Bundle
+
+To install .NET Core Bundle, follow these steps:
+
+*4.1* Download the .NET Core Bundle from the official Microsoft website.
+
+*4.2* Open the downloaded file and click on &quot;Install&quot;.
+
+*4.3* Wait for the installation process to complete.
+
+*4.4* Once the installation is complete, open the command prompt and type &quot;dotnet --version&quot; to
+
+*4.5* check if the installation was successful.
+
+*4.6* If the installation was successful,
+you should see the version number of .NET Core displayed in the command prompt.
+
+*4.7* To verify that the .NET Core SDK is installed,run &quot;dotnet new console -o myApp&quot; to create a new console application.
+
+*4.8* Change the current directory to &quot;myApp&quot; by using the &quot;cd myApp&quot; command.
+
+*4.9* Finally, run &quot;dotnet run&quot; to start the application.
+
+*4.10* Note: Make sure to install the latest version of .NET Core Bundle to ensure compatibility with the latest libraries and tools.
+
+
+### How to install the node module?:
+https://docs.google.com/document/d/1Op2zZu6rGfixJDI9F5c-olrorHhs0h62XIOWUQncwHA/edit?usp=sharing
+
+### 5.MySQL Connectors
+
+*5.1 What are MySQL Connectors: -*
+
+MySQL Connectors are software components that allow a variety of applications and programming
+languages to interact with a MySQL database.
+Connectors allow for sending SQL commands to a MySQL server and receiving results in a standardized way.
+
+*5.2 When MySql Connectors are required:*
+
+MySQL Connectors are required in the following scenarios:
+When integrating MySQL database with a web application: A connector acts as a bridge between the
+database and the web application, allowing the web application to send requests to the database and retrieve data.
+
+### How to install mysql connectors
+https://docs.google.com/document/d/114lBfefdWw5PuuXZ_eJnIerhtipV18eMTc9WUpQc8aw/edit?usp=sharing 
+
+---
+
+## HEADER 
+
+---
+### 1.HEADER LOCATION IN TFS
+Header location is in Source Branch :
+
+D:\TFS_GlobalV5\Assetraking\AssetTrackMVC_MySQL_for_Global_Version_5.2-QA\Souces\AssetTrak.Server\AssetrakWebServer\Arhata.Assetrak.Service.Host.\headers.txt
+
+### 2.HOW DEVELOPER WILL UPDATE HEADERS
+Developers add the headers in header files and they mention in JIRA point and check in into the DEVELOPER branch.
+
+### 3.HOW SHALL WE MAINTAIN CUSTOMER SPECIFIC HEADERS
+We need to discuss with Developers & Devops Seniors.
+
+### 4.HOW HEADERS WILL BE MIGRATED
+Devops see the header files in point and merged into a target branch in TFS.
+
+Then he picks the Header File in a Target branch and Validates it on  JSON Validator online. 
+
+After Validating header devops goto target branch url and take a backup of previous header file and replace the new Header with Old header.
+
+---
+
+## Code Merging
+
+---
+
+*** Open Jira (https://arhata.atlassian.net/jira/dashboards/10102) then go to the dashboard and go to DevOps merging Interface.
+
+*** Then select Point and Note down the ID of Change Set in notepad++ for our reference.
+
+*** Go to Azure DevOps(https://dev.azure.com/shaileshs0980/_git/AssetCues/branches) then go to Source branch & go to History.
+
+*** Then Open the point after selecting 3 dot Options then Select Cherry-Pick.
+
+*** Then Select Target Branch then Create Cherry-Pick.
+
+*** It’s Create Temporary Branch to merge the Changes.
+
+*** Then if you Have Description then add it Otherwise Create it.
+
+*** Then add a Comment(by Rushikesh-Point description).
+
+***  Then complete it and select all the 3 Options Strictly then Complete Merge.
+
+*** Then go to Target Branch to See the Merged Changes.
+
+### SERVICE SIDE
+
+*** Open Visual Studio & Open Source Branch OR open
+D:\TFS_GlobalV5\Assetraking\AssetTrackMVC_MySQL_for_Global_Version_5.2DEV\Souces\AssetTrak.Server\AssetrakWebServer\AssetrakWebServer.sln
+
+*** Get latest of Source Branch Then clean & Build.(DEV)
+
+*** Close the Source Branch & Open Target Branch OR open D:\TFS_GlobalV5\Assetraking\AssetTrackMVC_MySQL_for_Global_Version_5.2-QA\Souces\AssetTrak.Server\AssetrakWebServer\ AssetrakWebServer.sln
+
+
+*** Get the latest of Target Branch Then clean & Build.(QA)
+
+*** Select Source Branch then right click then go to Branching & Merging.
+
+*** Check & Select Source and target Branch Properly. Also select Option Selected Change sets Strictly.
+
+*** Then next, the change sets list appears.Do not select multiple change sets, select one by one and copy the name of the change set in Notepad++. Then next.
+
+*** If there is conflict then it displays 2 split windows including source & target (Call Developer).
+
+*** If there is no conflict then merge the change set and next.
+
+*** Then go to Team Explorer and go to Pending Changes.then go to all show solution changes and Include [merge,edit] files to target branch.
+
+*** After checking all files write a comment by Rushi: Point Description.
+
+*** Then Click Check-in when Check in successfully done then take Get latest version and clean & build the target branch .
+
+### HANDLING CONFLICTS
+
+*** If there is Conflict Occurs During Merging then we call the respective Developer of that point.
+
+*** Then he will merge the changes in merge tools and take the respective changes of that point and then devops will  merge the changes.
+
+### MERGING HEADER FILES
+
+*** Developer will check the header files in the Point number in JIRA.
+
+*** Then devops will merge the header files by taking the point number and get the latest of the source branch then clean & build.
+
+*** Then get the latest of the target branch then Clean & build.
+
+*** Then open target branch and go to branching & merging tab then go to merging then select the source & target branch and Stickly Select the Selected Changesets.
+
+*** Then go to the respective point and then next & finish.If there is conflict then it displays 2 split windows including source & target (Call Developer).
+
+*** If there is no conflict then go to Team Explorer and go to Pending Changes.then go to all show solution changes and Include [merge,edit] header files to target branch.
+
+*** After checking all files write a comment by Rushi: Point Description.
+
+*** Then Click Check-in when Check in successfully done then take Get latest version and clean & build the target branch .
+
+
+
+---
+
+## Setting up Customer Instance
+
+---
+### 1.Which Branch to pick?
+* Upload to any URL goes from PRODUCTION branch
+* Only for our internal URL, 
+qa.assetrak.net >> QA branch
+uat.assetrak.net >> UAT branch     
+Preproduction.assetrak.net >> PRD latest branch
+* There are multiple versions of PRD branch eg.5.3.0, 5.3.1, 5.3.2, 5.3.3, 5.3.4
+* To new hosting / new client upload goes from latest version for now PRD_5.3.4
+* For updating older clients, we migrate DB to latest branch and upload from latest branch
+
+### 2.Which DB to pick?
+* To upgrade a client we need to backup the original DB associated with the URL and then upgrade the DB with queries required for upgradation.
+* To a new client, we need to select the same blank DB as that of the code version.
+
+### 3.Scripts to be run?
+* If there are any query files in branch folder >> DB changes 
+
+### 4.How to upgrade customer instance?
+* Client side code upgrade
+* Service side code upgrade
+* DB upgrade
+* Header and resource of latest version
+
+### 5. Maintain history of new customer instances and upgrades?
+We are maintaining upload in file :
+(https://docs.google.com/spreadsheets/d/15pYiGchlB0Ot2W5dRzA4tO9kU_p3IwOUba0EwvYlImo/edit#gid=0) 
